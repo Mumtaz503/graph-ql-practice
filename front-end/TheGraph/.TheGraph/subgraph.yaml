@@ -1,0 +1,26 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Lock
+    network: sepolia
+    source:
+      address: "0x604Ae76248fABC1F3A2e3aD99D912a1e7336102D"
+      abi: Lock
+      startBlock: 5286958
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - InfoAdded
+      abis:
+        - name: Lock
+          file: ./abis/Lock.json
+      eventHandlers:
+        - event: InfoAdded((indexed uint32,string))
+          handler: handleInfoAdded
+      file: ./src/lock.ts

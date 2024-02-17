@@ -1,0 +1,8 @@
+type InfoAdded @entity(immutable: true) {
+  id: Bytes!
+  param0_age: BigInt! # uint32
+  param0_name: String! # string
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

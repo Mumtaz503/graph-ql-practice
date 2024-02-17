@@ -1,0 +1,29 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "components": [
+          { "internalType": "uint32", "name": "age", "type": "uint32" },
+          { "internalType": "string", "name": "name", "type": "string" }
+        ],
+        "indexed": true,
+        "internalType": "struct Lock.Dude",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "name": "InfoAdded",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint32", "name": "_age", "type": "uint32" },
+      { "internalType": "string", "name": "_name", "type": "string" }
+    ],
+    "name": "addInfo",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
